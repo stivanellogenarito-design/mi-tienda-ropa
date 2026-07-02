@@ -1,116 +1,268 @@
 body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
     margin: 0;
     padding: 0;
+}
+
+/* Barra informativa superior */
+.barra-beneficios {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .barra-beneficios {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: white;
+    padding: 50px 20px;
     text-align: center;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 40px 20px;
+header h1 {
+    margin: 0;
+    font-size: 38px;
+    letter-spacing: 3px;
+    font-weight: 800;
 }
 
+header p {
+    margin: 12px auto 0 auto;
+    max-width: 600px;
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Secciones contenedoras generales */
 section {
     background: white;
     margin: 30px auto;
-    padding: 20px;
-    max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 0 0 25px 0;
+    max-width: 1100px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
 }
 
-/* Imagen de bienvenida (las perchas) */
-.imagen-banner {
-    width: 100%;
-    height: 300px;
-    background-image: url('https://images.unsplash.com/photo-1542060748-10c28b629f6f?q=80&w=1000');
-    background-size: cover;
-    background-position: center;
-    border-radius: 6px;
-}
-
-/* Fotos de fondo originales de cada sección */
-.foto-categoria {
-    height: 200px;
+/* Banner de bienvenida */
+.banner-principal {
+    height: 350px;
+    background-image: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1542060748-10c28b629f6f?q=80&w=1200');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
-    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
 }
 
-.foto-remeras {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000');
+.banner-contenido h2 {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
 }
 
-.foto-pantalones {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000');
+.banner-contenido p {
+    font-size: 16px;
+    color: #f1f5f9;
 }
 
-.foto-abrigos {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000');
+/* Cabeceras de categorías con foto de fondo */
+.foto-categoria {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
+
+.foto-remeras { background-image: linear-gradient(rgba(15,23,42,0.4), rgba(15,23,42,0.4)), url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000'); }
+.foto-pantalones { background-image: linear-gradient(rgba(15,23,42,0.4), rgba(15,23,42,0.4)), url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000'); }
+.foto-abrigos { background-image: linear-gradient(rgba(15,23,42,0.4), rgba(15,23,42,0.4)), url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000'); }
 
 .foto-categoria h2 {
     color: white;
-    font-size: 28px;
+    font-size: 32px;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
-/* Cuadrícula estable para la suma de prendas */
+/* Cuadrícula moderna para las tarjetas de productos */
 .contenedor-productos {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
-.tarjeta {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px;
-    width: 48%;
+/* Tarjeta Premium de Producto */
+.tarjeta-producto {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    width: 195px;
     box-sizing: border-box;
+    text-align: left;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.01);
 }
 
-@media (max-width: 600px) {
-    .tarjeta {
-        width: 100%; /* En celu se pone una debajo de otra */
-    }
+.tarjeta-producto img {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    display: block;
 }
 
-.tarjeta h3 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
+/* Etiqueta flotante de envío gratis */
+.etiqueta-envio {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.producto-info {
+    padding: 12px;
+}
+
+.tarjeta-producto h3 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    color: #0f172a;
+    font-weight: 700;
+    height: 38px;
+    overflow: hidden;
+}
+
+.descripcion {
+    font-size: 11px;
+    color: #64748b;
+    margin: 0 0 10px 0;
+    height: 32px;
+    overflow: hidden;
+    line-height: 1.3;
 }
 
 .precio {
-    color: #27ae60;
-    font-weight: bold;
-    margin: 0;
+    color: #0f172a;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+    font-size: 18px;
+}
+
+.cuotas {
+    font-size: 11px;
+    color: #2563eb;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stock {
+    font-size: 10px;
+    color: #e11d48;
+    font-weight: 600;
+    display: block;
+}
+
+/* Sección Interactiva de contacto y cupones */
+.contacto {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.contacto p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0 0 20px 0;
 }
 
 button {
-    background-color: #27ae60;
+    background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 14px 30px;
+    font-size: 15px;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
 }
 
+#mensaje {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.codigo-destacado {
+    background-color: #e8f5e9;
+    border: 2px dashed #27ae60;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+/* Pie de página */
 footer {
-    padding: 20px;
-    background-color: #2c3e50;
+    padding: 30px 20px;
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    border-top: 1px solid #334155;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer strong {
     color: white;
-    margin-top: 40px;
+}
+
+.subfooter {
+    margin-top: 6px !important;
+    font-size: 12px;
+    color: #64748b;
 }
