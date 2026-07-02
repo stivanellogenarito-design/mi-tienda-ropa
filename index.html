@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estilo Urbano - Venta de Ropa</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Estilo Urbano</h1>
+        <p>Tu tienda online de ropa moderna, cómoda y con toda la onda. Vestite como te gusta todos los días.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Colección Invierno 2026</h2>
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500" alt="Ropa de invierno" style="max-width:100%; border-radius:8px;">
+        </section>
+
+        <section>
+            <h2>¿Por qué elegirnos?</h2>
+            <ul>
+                <li>Diseños exclusivos y de edición limitada.</li>
+                <li>Telas de alta calidad y súper cómodas.</li>
+                <li>Envíos a todo el país.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contacto y Promociones</h2>
+            <p>Seguinos en nuestro <a href="https://instagram.com" target="_blank">Instagram Oficial</a> para ver los ingresos semanales.</p>
+            
+            <button id="miBoton">¡Quiero mi código de descuento!</button>
+            <p id="mensaje"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Estilo Urbano © 2026 - Proyecto Dev's</p>
+    </footer>
+
+    <script>
+        document.getElementById("miBoton").addEventListener("click", function() {
+            document.getElementById("mensaje").textContent = "¡Tu código es URBANO2026 para un 15% OFF!";
+            document.getElementById("mensaje").style.color = "#e74c3c";
+            document.getElementById("mensaje").style.fontWeight = "bold";
+        });
+    </script>
+</body>
+</html>
