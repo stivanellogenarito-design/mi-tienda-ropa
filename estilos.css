@@ -4,86 +4,97 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 header {
     background-color: #2c3e50;
     color: white;
-    text-align: center;
     padding: 40px 20px;
-}
-
-.bienvenida {
-    background-color: #34495e;
-    color: white;
-    text-align: center;
-    padding: 30px;
-}
-
-.bienvenida h2 {
-    color: #fff;
-    border: none;
-    text-align: center;
 }
 
 section {
     background: white;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px;
     max-width: 800px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #27ae60;
-    padding-bottom: 8px;
-    text-align: left;
+/* Imagen de bienvenida (las perchas) */
+.imagen-banner {
+    width: 100%;
+    height: 300px;
+    background-image: url('https://images.unsplash.com/photo-1542060748-10c28b629f6f?q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
 }
 
-/* Contenedor en cuadrícula ultra estable */
+/* Fotos de fondo originales de cada sección */
+.foto-categoria {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.foto-remeras {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000');
+}
+
+.foto-pantalones {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000');
+}
+
+.foto-abrigos {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000');
+}
+
+.foto-categoria h2 {
+    color: white;
+    font-size: 28px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+/* Cuadrícula estable para la suma de prendas */
 .contenedor-productos {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
     justify-content: space-between;
-    margin-top: 15px;
 }
 
 .tarjeta {
     background: #fff;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #ddd;
     border-radius: 6px;
     padding: 15px;
-    width: 47%;
+    width: 48%;
     box-sizing: border-box;
-    text-align: center;
-    transition: 0.2s;
 }
 
 @media (max-width: 600px) {
     .tarjeta {
-        width: 100%; /* Se adapta a una sola columna en celulares */
+        width: 100%; /* En celu se pone una debajo de otra */
     }
 }
 
 .tarjeta h3 {
-    margin: 0 0 10px 0;
+    margin: 0 0 8px 0;
     font-size: 16px;
-    color: #333;
 }
 
 .precio {
     color: #27ae60;
     font-weight: bold;
     margin: 0;
-    font-size: 17px;
-}
-
-.contacto {
-    text-align: center;
-    padding: 30px;
 }
 
 button {
@@ -97,14 +108,9 @@ button {
     font-weight: bold;
 }
 
-button:hover {
-    background-color: #219653;
-}
-
 footer {
-    text-align: center;
     padding: 20px;
     background-color: #2c3e50;
     color: white;
-    margin-top: 5px;
+    margin-top: 40px;
 }
